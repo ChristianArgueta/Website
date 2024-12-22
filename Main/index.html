@@ -59,15 +59,37 @@
       border: 2px solid #2879A7;
       border-radius: 5px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .content-box h2 {
       color: #2879A7;
-      text-align: center;
     }
 
     .content-box p {
-      text-align: justify;
+      text-align: center;
+    }
+
+    .content-box .button {
+      display: inline-block;
+      margin: 10px;
+      background-color: #2879A7;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      text-align: center;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .content-box .button-container {
+      text-align: center;
+    }
+
+    .content-box .button:hover {
+      background-color: #1f5e85;
     }
 
     .resume-box {
@@ -84,33 +106,22 @@
       margin-bottom: 15px;
     }
 
-    .resume-box a {
+    .resume-box .resume-link {
       display: inline-block;
+      margin: 10px;
+    }
+
+    .resume-box .resume-link a {
+      display: block;
       background-color: #2879A7;
       color: white;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 15px 25px;
       border-radius: 5px;
-      margin: 5px;
-    }
-
-    .resume-box a:hover {
-      background-color: #1f5e85;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #2879A7;
-      color: white;
-      border: none;
-      padding: 10px 20px;
       text-align: center;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
     }
 
-    .button:hover {
+    .resume-box .resume-link a:hover {
       background-color: #1f5e85;
     }
 
@@ -129,7 +140,7 @@
     }
 
     .portrait {
-      max-width: 30%;
+      max-width: 40%;
       height: auto;
       border-radius: 10px;
     }
@@ -242,25 +253,24 @@
       <section id="research">
         <h2>Research and Templates</h2>
         <p>Here you can find my latest research projects and papers, as well as downloadable templates for school work.</p>
-        <button class="button" onclick="showResearch()">Show Research</button>
-        <div id="research-list" style="display:none; margin-top:10px;">
-          <ul>
-            <li>Project 1: Black Hole Simulations</li>
-            <li>Project 2: Spectral Analysis of Stars</li>
-            <li>Project 3: Dark Matter Mapping</li>
-          </ul>
+        <div class="button-container">
+          <a href="#" class="button" onclick="showResearch()">Show Research</a>
+          <a href="#" class="button" onclick="downloadTemplate()">Download Templates</a>
         </div>
-        <button class="button" onclick="downloadTemplate()" style="margin-top: 15px;">Download Templates</button>
       </section>
     </div>
 
-    <div class="content-box">
-      <section>
-        <h2>Resumes / CV</h2>
+    <div class="resume-box">
+      <h2>Resumes / CV</h2>
+      <div class="resume-link">
         <a href="path/to/technical_resume.pdf" target="_blank">Technical Resume</a>
+      </div>
+      <div class="resume-link">
         <a href="path/to/policy_resume.pdf" target="_blank">Policy Resume</a>
+      </div>
+      <div class="resume-link">
         <a href="path/to/academic_cv.pdf" target="_blank">Curriculum Vitae</a>
-      </section>
+      </div>
     </div>
 
     <div class="profile-contact">
