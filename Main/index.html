@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics and Astronomy Portfolio</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Sans Mona', Arial, sans-serif;
+      line-height: 1.6;
+      background-color:  #d0e8b9;
+      color: #2879A7;
+      margin: 0;
+    }
+
+    header {
+      background-color: #353535;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .content-box {
+      padding: 20px;
+      background-color: #ffffff;
+      border-left: 5px solid #2879A7;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .content-box h2 {
+      color: #2879A7;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #2879A7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #1f5e85;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .profile-contact {
+      display: flex;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .portrait {
+      max-width: 40%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .contact-box {
+      padding: 20px;
+      background-color: #ffffff;
+      border: 2px solid #2879A7;
+      border-radius: 5px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+    }
+
+    .contact-box h2 {
+      color: #2879A7;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .contact-icons a {
+      color: #2879A7;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .contact-icons a:hover {
+      color: #1f5e85;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        margin: 0 5px;
+      }
+
+      .container {
+        padding: 0 10px;
+      }
+
+      .content-box {
+        padding: 15px;
+      }
+
+      .button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+      }
+
+      .profile-contact {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .portrait {
+        max-width: 90%;
+      }
+
+      .contact-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Sans+Mona&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH/2kFXOef0zF6wTY3Bx1PxFP2KzO4qEfl14SNWY9KSTtmgL6aHhAZ9hD8WwuHBOodH3hC3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <h1>My Physics & Astronomy Portfolio</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#research">Research</a>
+      <a href="#templates">Templates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="content-box">
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I am a Physics and Astronomy student showcasing my work and research. Explore my site to learn more!</p>
+      </section>
+
+      <section id="research" class="section">
+        <h2>Research</h2>
+        <p>Here you can find my latest research projects and papers.</p>
+        <button class="button" onclick="showResearch()">Show Research</button>
+        <div id="research-list" style="display:none; margin-top:10px;">
+          <ul>
+            <li>Project 1: Black Hole Simulations</li>
+            <li>Project 2: Spectral Analysis of Stars</li>
+            <li>Project 3: Dark Matter Mapping</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="templates" class="section">
+        <h2>Templates</h2>
+        <p>Download my school work templates for free!</p>
+        <button class="button" onclick="downloadTemplate()">Download Template</button>
+      </section>
+    </div>
+
+    <div class="profile-contact">
+      <img src="../Pictures/IMG_2622.JPG" alt="My Portrait" class="portrait">
+      <div class="contact-box">
+        <h2>Contact Info</h2>
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Address:</strong> 123 Astronomy Lane, Galaxy City</p>
+
+        <div class="contact-icons">
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:your.email@example.com" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.google.com/maps/place/123+Astronomy+Lane,+Galaxy+City" target="_blank" title="Location">
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showResearch() {
+      const researchList = document.getElementById('research-list');
+      if (researchList.style.display === 'none') {
+        researchList.style.display = 'block';
+      } else {
+        researchList.style.display = 'none';
+      }
+    }
+
+    function downloadTemplate() {
+      alert('Template downloading...');
+      // You can link a file here for download
+      // Example: window.location.href = 'path-to-your-template-file';
+    }
+  </script>
+</body>
+</html>
